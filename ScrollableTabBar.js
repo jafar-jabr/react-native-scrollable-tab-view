@@ -12,9 +12,7 @@ const {
   Dimensions,
 } = ReactNative;
 const Button = require('./Button');
-const ViewPropTypes = {
-  style: {},
-};
+
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
 const ScrollableTabBar = createReactClass({
@@ -26,12 +24,12 @@ const ScrollableTabBar = createReactClass({
     activeTextColor: PropTypes.string,
     inactiveTextColor: PropTypes.string,
     scrollOffset: PropTypes.number,
-    style: ViewPropTypes?.style,
-    tabStyle: ViewPropTypes?.style,
-    tabsContainerStyle: ViewPropTypes?.style,
-    textStyle: Text?.propTypes?.style,
+    style: PropTypes.func,
+    tabStyle: PropTypes.func,
+    tabsContainerStyle: PropTypes.func,
+    textStyle: PropTypes.func,
     renderTab: PropTypes.func,
-    underlineStyle: ViewPropTypes?.style,
+    underlineStyle: PropTypes.func,
     onScroll: PropTypes.func,
   },
 

@@ -9,9 +9,7 @@ const {
   Platform,
   StyleSheet,
 } = ReactNative;
-const ViewPropTypes = {
-  style: {},
-};
+
 const TimerMixin = require('react-timer-mixin');
 const ViewPager = require('@react-native-community/viewpager');
 
@@ -39,12 +37,12 @@ const ScrollableTabView = createReactClass({
     onChangeTab: PropTypes.func,
     onScroll: PropTypes.func,
     renderTabBar: PropTypes.any,
-    tabBarUnderlineStyle: ViewPropTypes?.style,
+    tabBarUnderlineStyle: PropTypes.func,
     tabBarBackgroundColor: PropTypes.string,
     tabBarActiveTextColor: PropTypes.string,
     tabBarInactiveTextColor: PropTypes.string,
     tabBarTextStyle: PropTypes.object,
-    style: ViewPropTypes?.style,
+    style: PropTypes.func,
     contentProps: PropTypes.object,
     scrollWithoutAnimation: PropTypes.bool,
     locked: PropTypes.bool,
